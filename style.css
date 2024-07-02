@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+20+Charted&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Teko:wght@300..700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #dc5f00;
+  --secondary-color: #373a40;
+  --tertiary-color: #686d76;
+  --quaternary-color: #eeeeee;
+}
+
+.dark-theme {
+  --primary-color: #dc5f00;
+  --secondary-color: #eeeeee;
+  --tertiary-color: #b7babf;
+  --quaternary-color: #373a40;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--quaternary-color);
+  color: #373a40;
+  width: 100%;
+  min-height: 100%;
+  padding: 0 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-size: 2.3rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  height: 5rem;
+  font-size: 1.2rem;
+  background-color: var(--quaternary-color);
+  margin-bottom: 1rem;
+  border-bottom: 4px solid var(--primary-color);
+  z-index: 10;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 20rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      color: #333;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+nav button {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 48px;
+  min-width: 140px;
+  outline: none;
+  padding: 0 17px;
+  text-align: center;
+  transition: all 0.3s;
+  user-select: none;
+  touch-action: manipulation;
+  background-color: transparent;
+
+  &:focus {
+    color: var(--secondary-color);
+  }
+
+  &:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  &:active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(75, 73, 74);
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: black;
+  box-shadow: inset 8px -4px 0 0 white;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #eeeeee;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+  background-color: #dc5f00;
+  box-shadow: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: calc(100vh + 96px);
+  margin: 0 auto;
+  gap: 0.5rem;
+
+  p:first-child {
+    font-size: 1.5rem;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 500;
+    color: var(--secondary-color);
+  }
+
+  .proffesion {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--tertiary-color);
+  }
+
+  p:last-child {
+    font-size: 3rem;
+    font-family: "Mulish", sans-serif;
+    line-height: 1.5;
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+}
+
+.about-me {
+  width: 70%;
+  height: calc(100vh + 96px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-weight: 500;
+    font-family: "Teko", sans-serif;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.about-me main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--tertiary-color);
+  }
+
+  span {
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-family: "Teko", sans-serif;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--tertiary-color);
+    font-family: "Teko", sans-serif;
+    margin-top: 1.5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+  }
+
+  p:nth-of-type(3) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 35.25rem;
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+  }
+
+  img {
+    border-radius: 12px;
+    /* display: none; */
+  }
+  figcaption {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: "Jersey 20 Charted", sans-serif;
+    margin: 0.6rem 0 0;
+    color: var(--primary-color);
+  }
+}
+
+.game-plan {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+
+  div {
+    display: flex;
+    gap: 6rem;
+  }
+  & img {
+    border-radius: 12px;
+  }
+  & p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+  div:nth-child(2) p {
+    text-align: right;
+  }
+}
+
+.contact {
+  width: 100%;
+  height: calc(100vh + 96px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #cfd1d5;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    max-width: 800px;
+
+    p {
+      font-size: 2.5rem;
+      font-weight: 100;
+      font-family: "Mulish", sans-serif;
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      gap: 1.5rem;
+      margin: 2rem 0 0.5rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.5rem;
+      border-radius: 2px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+      width: 100%;
+      background-color: #eeeeee;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border-radius: 2px;
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+      cursor: pointer;
+      background-color: #dc5f00;
+      color: #eeeeee;
+      transition: all 0.3s;
+
+      &:not(:disabled):hover {
+        background-color: #eeeeee;
+        color: #373a40;
+      }
+      &:not(:disabled):active {
+        background-color: #eeeeee;
+        color: #373a40;
+      }
+      /* Style when button is disabled */
+      &:disabled {
+        cursor: text; /* Change cursor to indicate it's not clickable */
+      }
+
+      /* Additional class to visually and functionally disable the button */
+      .disabled {
+        cursor: text; /* Prevent cursor interaction */
+        pointer-events: none; /* Disable all pointer events */
+        color: #eeeeee;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 6rem;
+  color: var(--secondary-color);
+
+  a {
+    font-size: 1.2rem;
+    font-family: "Rajdhani", sans-serif;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--secondary-color);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        padding: 0.5rem;
+    }
+  nav ul,
+  nav a {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    gap: 0.5rem;
+    
+    p:first-child {
+        font-size: 1.2rem;
+    }
+    .proffesion {
+        font-size: 0.8rem;
+    }
+    p:last-child {
+        font-size: 2rem;
+    }
+  }
+
+  .about-me main {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: calc(100vh + 228px);
+    margin-bottom: 8rem;
+    div {
+        min-width: 350px;
+    }
+     p {
+        font-size: 1.2rem;
+     }
+    
+    img {
+        display: inline;
+    }
+    p:nth-of-type(3) {
+        width: 100%;
+    }
+  }
+
+  img {
+    display: none;
+  }
+
+  .game-plan {
+    gap: 1.5rem;
+    margin-top: 8rem;
+    div {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+  }
+
+  .contact {
+    form p {
+        font-size: 1.5rem;
+    }
+  }
+
+
+  footer {
+    flex-direction: column-reverse;
+    a {
+        margin: 0 8px;
+        font-size: 1rem;
+        justify-content: center;
+    }
+  }
+}

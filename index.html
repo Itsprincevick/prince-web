@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince's Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <p>My Crib</p>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#game-plan">Game Plan</a></li>
+        </ul>
+        <div>
+            <a href="#contact"><button class="button-59">Contact Me</button></a>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle"/>
+                <span class="slider"></span>
+            </label>
+        </div>
+      </nav>
+    </section>
+
+    <section class="container" id="home">
+      <p>Princevick</p>
+      <p class="proffesion">Web Developer</p>
+      <p>
+        Hey there! I am an Enthusiastic Front-End Developer, Crafting Websites
+        with Passion. Based in Lagos, Nigeria.
+      </p>
+    </section>
+
+    <section class="about-me" id="about">
+      <main>
+        <div>
+          <!-- <h1>Slack Profile</h1> -->
+          <p data-testid="slackDisplayName">
+            <span>Slack Name:</span> Prince Vick
+          </p>
+          <p data-testid="slackEmail">
+            <span>Slack Email:</span> Victoronipe565@gmail.com
+          </p>
+          <h2>About Me</h2>
+          <p>
+            As a young enthusiast, I thrive on learning and developing new
+            skills. My passion lies in making a positive impact on society, and
+            my ultimate dream is to extend that impact globally.
+          </p>
+        </div>
+        <figure>
+          <img
+            src="/asset/Prince's.jpg"
+            alt="Princevick Profile image"
+            data-testid="slackProfilePicture"
+          />
+          <figcaption
+            id="date-time"
+            data-testid="currentTimeUTC currentDay"
+          ></figcaption>
+        </figure>
+      </main>
+    </section>
+
+    <section class="game-plan" id="game-plan">
+      <div>
+        <p>
+          In the next <span>Two years</span>, I aim to become an expert in
+          front-end development, particularly using frameworks like React.js,
+          Next.js, Cause I'm passionate about creating user-friendly and
+          visually engaging web experiences.
+        </p>
+        <img src="/asset/prommer image (2).jpg" alt="Programming Image" />
+      </div>
+      <div>
+        <img src="/asset/open source.jpg" alt="Open source image" />
+        <p>
+          Within the next 24 months, I plan to contribute to at least 3
+          open-source web development projects and achieve a score of over 80%
+          on a professional front-end developer certification exam.
+        </p>
+      </div>
+      <div>
+        <p>
+          In the next two years, I aim to create a web platform that connects
+          healthcare organizations with qualified professionals. This platform
+          will also offer valuable healthcare services, making it a one-stop
+          solution for workforce needs.
+        </p>
+        <img src="/asset/med.png" alt="Project logo" />
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <form id="contact-form" action="https://formspree.io/f/mgvwekep" method="post">
+            <p>Want to get in touch?</p>
+            <p>Drop me a line!</p>
+            <div>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section>
+      <footer>
+        <p>
+          © <span id="current-date">2021</span> Princevick. All Rights Reserved.
+        </p>
+        <div>
+          <a href="https://hng.tech/learn" data-testid="hngLink" target="_blank"
+            >HNG Learn</a
+          >
+          <a
+            href="https://keyword.dog"
+            data-testid="keywordLink"
+            target="_blank"
+            >Keyword Dog</a
+          >
+          <a
+            href="https://scrapeanyweb.site"
+            data-testid="scrapeanywebLink"
+            target="_blank"
+            >Scrape Any Web</a
+          >
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
